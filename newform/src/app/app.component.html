@@ -1,0 +1,27 @@
+<h1>template drive form</h1>
+<div class="container">
+  <div class="row">
+    <div class="Form-bg">
+        <form #studentForm="ngForm" (ngSubmit)="RegisterStudent(studentForm)">
+            <div>
+              <h1>Student Ragistration</h1>
+            </div>
+            <div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" class="form-control" name="firstName" ngModel>
+            </div>
+            <div>
+              <label for="lastName">Last Name</label>
+              <input id="lastName" type="text" class="form-control" name="lastName" ngModel>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="text" class="form-control" name="Email" ngModel>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

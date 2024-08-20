@@ -1,0 +1,68 @@
+<H1> Angular pipes for Data Transformation </H1>
+<p>{{x | date: 'YYYY-MM-dd h:mm:ss a'}}</p>
+<div class="container">
+<h1> Student  Information </h1>
+<table class="table table-striped" >
+  <tr><th>Student Id</th><th>Stduent Name</th><th>Gender</th></tr>
+@for(student of students ; track student.stuId){
+<tr>
+  <td>{{student.stuId}}</td>
+  <td>{{student.name}}</td>
+  <td>{{student.gender | gender}}</td>
+</tr>
+}
+
+</table>
+</div>
+
+<div class="container">
+   
+
+    <h1>Angular 17 Create Custom Pipe Example </h1>
+  
+    <!-- New @for loop -->
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Website</th>
+      </tr>
+      @for (person of persons; track person.id;) {
+        <tr>
+          <td>{{ person.id }}</td>
+          <td>{{ person.name }}</td>
+          <td>{{ person.gender | gender }}</td>
+          <td>{{ person.website }}</td>
+        </tr>
+      }
+    </table>
+  
+</div>
+<h1>Angular Routing example </h1>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Admin Panel</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#user" routerLink="/user">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#post" routerLink="/post">Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#trv" routerLink="/travel">Travel</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+   
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
